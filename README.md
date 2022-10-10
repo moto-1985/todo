@@ -44,3 +44,17 @@ Route::resource('/task', 'TaskController');
 // Bootstrap4 Datepickerを設定してカレンダーを設定
 参考：https://qiita.com/saka212/items/55670d43f4bf6ef070cd
 
+--- ここまででfirst commit
+
+--- ここから続き
+#### TaskModelに$fillableを追加
+#### TaskControllerのstoreメソッドを定義
+#### バリデーションの定義
+#### 画像の保存 シンボリックリンク作成
+php artisan storage:link
+#### 全部のユーザをusersテーブルから取得して表示するようにした
+参考：https://readouble.com/laravel/8.x/ja/queries.html
+#### タスク一覧画面の作成
+#### サイドバーを作成する
+#### 削除と編集作成
+--- ここまででsecond commit

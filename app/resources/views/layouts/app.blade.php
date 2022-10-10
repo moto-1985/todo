@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- date picker用に記載 -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <!-- https://bbbootstrap.com/snippets/forum-discussion-template-65198141 このリンクからCSSを取得 ただ変わらなかった -->
+    <link href="{{ asset('css/forum.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9c13b15b81.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -80,7 +84,16 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3">
+                    @include('layouts.sidebar')
+                    </div>
+                    <div class="col-12 col-md-8  col-lg-9">                 
+                    @yield('content')
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </body>

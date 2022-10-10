@@ -158,6 +158,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title'=>'件名',
+        'content'=>'内容',
+        'user_id'=>'担当者',
+        'start_date'=>'開始日',
+        'end_date'=>'終了日',
+    ],
 
 ];
