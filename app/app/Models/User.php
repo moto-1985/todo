@@ -13,12 +13,16 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     public function tasks() {
-        return $this->hasMany('APP\Models\Task');
+        return $this->belongsToMany(Task::class, 'bookmarks', 'user_id', 'task_id');
     }
 
-    public function bookmarks() {
-        return $this->hasMany('APP\Models\Bookmark');
-    }
+    // 元々こうやって書いていた
+    // public function tasks() {
+    //     return $this->hasMany('APP\Models\Task');
+    // }
+    // public function bookmarks() {
+    //     return $this->belongsToMany('APP\Models\Bookmark');
+    // }
     /**
      * The attributes that are mass assignable.
      *

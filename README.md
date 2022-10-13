@@ -58,3 +58,8 @@ php artisan storage:link
 #### サイドバーを作成する
 #### 削除と編集作成
 --- ここまででsecond commit
+#### これ参考にする bookmarksテーブルに外部キー制約を入れた
+https://laraweb.net/practice/4393/
+#### 多対多の関係を定義
+--- ここまででthird commit
+#### 
