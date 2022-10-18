@@ -72,5 +72,6 @@ https://biz.addisteria.com/laravel_withpivot/
 php artisan make:controller BookmarkController --resource
 
 ### これじゃないとダメ　　Base table or view not found: 1146 Table 'todo.task_users' doesn't exist と言われた
+task_usersテーブル
 php artisan make:model TaskUser -m
 php artisan migrate:rollback --step=1
