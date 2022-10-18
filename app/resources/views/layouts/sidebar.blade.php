@@ -7,4 +7,8 @@
     class="list-group-item {{url()->current()==route('task.create')? 'active' : ''}}">
         <i class="fas fa-pen-nib pr-2"></i><span>新規投稿</span>
     </a>
+    <a href="{{route('bookmark')}}"
+    class="list-group-item {{url()->current()==route('bookmark')? 'active' : ''}}">
+        <i class="fas fa-pen-nib pr-2"></i><span>ブックマーク一覧</span>
+    </a>
 </div>

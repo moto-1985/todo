@@ -62,4 +62,15 @@ php artisan storage:link
 https://laraweb.net/practice/4393/
 #### 多対多の関係を定義
 --- ここまででthird commit
-#### 
+#### bookmarksテーブルを → user_taskに変更
+php artisan migrate:rollback
+php artisan make:migration create_tasks_users_table --create=task_user
+php artisan migrate
+php artisan make:model TaskUser
+https://biz.addisteria.com/laravel_withpivot/
+#### コントローラーの作成
+php artisan make:controller BookmarkController --resource
+
+### これじゃないとダメ　　Base table or view not found: 1146 Table 'todo.task_users' doesn't exist と言われた
+php artisan make:model TaskUser -m
+php artisan migrate:rollback --step=1

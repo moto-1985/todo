@@ -6,7 +6,7 @@
 @endif
 
 <div class="ml-2 mb-3">
-    タスク一覧
+    ブックマーク一覧
 </div>
 {{$user->name}}さん、こんにちは！
 @foreach ($tasks as $task)
@@ -17,20 +17,9 @@
                 <div class="card-header">
                     <div class="media flex-wrap w-100 align-items-center">
                         <div class="media-body ml-3">
-                            <a href="{{route('task.show', $task)}}">タイトル：{{ $task->title }}</a>
+                        <a href="{{route('task.show', $task)}}">タイトル：{{ $task->title }}</a>
                             <div class="text-muted small"> 実施者：{{ $task->user->name }}</div>
                         </div>
-                        <!-- <span class="ml-auto">
-                            <a href="{{route('bookmark.update', $task)}}"><button class="btn btn-primary">ブックマーク</button></a>
-                        </span> -->
-                        <form class="" action="{{ route('bookmark.update') }}" method="POST">
-                            @csrf
-                            <input type="hidden" name="task" value="{{ $task }}" />
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">ブックマーク</button>
-                                <!-- <textarea class="form-control" name="content" rows="3" placeholder="ここにメモを入力"></textarea> -->
-                            </div>
-                        </form>
                         <div class="text-muted small ml-3">
                             <div> 投稿日 </div>
                             <div><strong> {{ $task->created_at->diffForHumans() }} </strong> </div>
